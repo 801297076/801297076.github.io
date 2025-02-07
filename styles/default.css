@@ -1,0 +1,30 @@
+body
+{
+    background-color: darkgray;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+}
+
+a
+{
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: aquamarine;
+}
+
+main
+{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2
+{
+    text-align: center;
+}
