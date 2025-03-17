@@ -32,7 +32,6 @@
         }
         main {
             padding: 20px;
-            display: none;
         }
         section {
             display: none;
@@ -42,10 +41,6 @@
             padding: 10px;
             background-color: rgb(33, 33, 33);
             color:rgb(255, 209, 122);
-        }
-        .active {
-            text-decoration: underline;
-            color: white;
         }
     </style>
 </head>
@@ -66,7 +61,18 @@
     <main>
         <section id="home">
             <h2>What Exactly is 3D Animation?</h2>
-            <p>3D animation is...</p>
+            <p>3D animation is the process of creating moving digital characters, objects, and enviroments within a three-dimensional space. Unlike 2D animation, where images are drawn frame by frame, 3D animation relies on models, rigging, and movement controlled by software.</p>
+            <h3>How Does It Work?</h3>
+            <ul>
+                <li><strong>Modeling</strong> - Creating the digital character or object.</li>
+                <li><strong>Rigging</strong> - Adding a skeletal structure to allow movement.</li>
+                <li><strong>Animation</strong> - Moving the model using keyframes or motion capture.</li>
+                <li><strong>Rendering</strong> - Generating the final animation with lighting and textures.</li>
+            </ul>
+            <h3>Why 3D Animation?</h3>
+            <p>3D animation is used in movies, games, VR, and even medical simulations! Whether you're an aspiring artist or just curious about the process, learning 3D animation can open up a world of creative possibilities!</p>
+            <h3>Getting Started...</h3>
+            <p>If you're new to 3D animation, start with beginner friendly software like Blender (free) or Autodesk Maya (industry standard & expensive paid subscription). There are countless online tutorials and courses available to help you learn at your own pace.</p>
         </section>
 
         <section id="about">
@@ -109,16 +115,10 @@
 
             document.getElementById(sectionId).style.display = 'block';
 
-            document.querySelectorAll('nav a').forEach((link) => {
-                if (link.getAttribute('onclick').includes(sectionId)) {
-                    link.classList.add('active');
-                }
-            });
-
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            showSection('home');
+            showSection('home', {target : document.querySelector('nav a[href="#"]') });
         });
 
     </script>
