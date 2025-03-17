@@ -41,6 +41,11 @@
             text-align: center;
             padding: 10px;
             background-color: rgb(33, 33, 33);
+            color:rgb(255, 209, 122);
+        }
+        .active {
+            text-decoration: underline;
+            color: white;
         }
     </style>
 </head>
@@ -95,7 +100,27 @@
     </footer>
 
     <script>
-        
+
+        function showSection(sectionId, event) {
+            
+            document.querySelectorAll('section').forEach((section) => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+
+            document.querySelectorAll('nav a').forEach((link) => {
+                if (link.getAttribute('onclick').includes(sectionId)) {
+                    link.classList.add('active');
+                }
+            });
+
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+
     </script>
 
 </body>
