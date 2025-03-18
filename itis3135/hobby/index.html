@@ -49,6 +49,7 @@
     <header>
         <h1>3D Animation Hobby </h1>
         <nav>
+            <!-- This is the navigation menu with the links to each section-->
             <a href="#" onclick="showSection('home')">Home </a> |
             <a href="#" onclick="showSection('about')">About </a> |
             <a href="#" onclick="showSection('best-times')">Best Times </a> |
@@ -59,6 +60,7 @@
     </header>
 
     <main>
+        <!-- This is the HOME section-->
         <section id="home">
             <h2>What Exactly is 3D Animation?</h2>
             <p>3D animation is the process of creating moving digital characters, objects, and enviroments within a three-dimensional space. Unlike 2D animation, where images are drawn frame by frame, 3D animation relies on models, rigging, and movement controlled by software.</p>
@@ -76,6 +78,7 @@
             <p>If you're new to 3D animation, start with beginner friendly software like Blender (free) or Autodesk Maya (industry standard & expensive paid subscription). There are countless online tutorials and courses available to help you learn at your own pace.</p>
         </section>
 
+        <!-- This is the ABOUT section-->
         <section id="about">
             <h2>About Me</h2>
             <p>Hey everyone! My name is Bogdan Gerasymenko, and I've been passionate about 3D animation for over 7 years! I started my journey in animation using Blender, and over time, I expanded my skills into Maya, Unreal Engine, and other industry-standard tools/software.</p>
@@ -104,6 +107,7 @@
             <p>If you're into animation or just want to talk about games, movies, or creative projects, feel free to reach out! I'm always happy to discuss animation techniques, industry trends, or bounce around cool ideas.</p>
         </section>
 
+        <!-- This is the BEST TIMES section-->
         <section id="best-times">
             <h2>Best Time to Get Started in 3D Animation</h2>
             <p>When is the best time to start learning 3D animation? The short answer: right now!!!</p>
@@ -120,6 +124,7 @@
             <p>So, if you've ever thought about getting into 3D animation, don't wait for the "perfect" time—start now and grow as you go!</p>
         </section>
 
+        <!-- This is the BEST LOCATION section-->
         <section id="best-locations">
             <h2>What is the best place to learn and work?</h2>
             <img src="/itis3135/images/LA_Stock_Photo.jpg" alt="LA Stock Photo" width="400">
@@ -150,6 +155,7 @@
             </ul>
         </section>
 
+        <!-- This is the HOW section-->
         <section id="how">
             <h2>How to get into 3D Animation</h2>
             <img src="/itis3135/images/Ball_Bounce_Comp.jpg" alt="Ball Bounce Stock" width="400">
@@ -199,6 +205,7 @@
             <p>Starting in 3D animation takes time and dedication, but with persistence and passion, you can turn it into a fulfilling career!</p>
         </section>
 
+        <!-- This is the WHY section-->
         <section id="why">
             <h2>Why I Chose Game Animation</h2>
             <p>Game animation isn’t just about making characters move—it’s about creating a seamless, immersive experience that players can feel. Every action, reaction, and movement needs to serve gameplay while maintaining the artistic vision of the game.</p>
@@ -215,23 +222,28 @@
         </section>
     </main>
 
+    <!-- This is footer that contains my copyright-->
     <footer>
         <p>Page Built by Bogdan Gerasymenko &copy; 2025</p>
     </footer>
 
     <script>
-
+        // This is the function to show a specific section while hiding others
         function showSection(sectionId, event) {
             
+            // This hides all sections by setting their display style to none
             document.querySelectorAll('section').forEach((section) => {
                 section.style.display = 'none';
             });
-
+            
+            // This shows the section with the specified ID by setting its display to block
             document.getElementById(sectionId).style.display = 'block';
 
         }
 
+        // This waits until the DOM is fully loaded before executing the code
         document.addEventListener('DOMContentLoaded', () => {
+            // This automatically shows the home section when the page loads
             showSection('home', {target : document.querySelector('nav a[href="#"]') });
         });
 
