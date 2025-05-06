@@ -4,15 +4,34 @@
     <meta charset="UTF-8" />
     <title>Interactive Landscape</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
+        font-family: sans-serif;
+      }
+
+      header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px 0;
+        z-index: 10;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      canvas {
+        display: block;
       }
     </style>
   </head>
   <body>
+    <header>Welcome to the Interactive Landscape</header>
     <script>
       function setup() {
         createCanvas(600, 400);
@@ -25,13 +44,15 @@
         stroke("orange");
         strokeWeight(20);
         circle(550, 50, 100);
+
         stroke(0);
         strokeWeight(1);
         fill("green");
         rect(0, 200, 600, 200);
-        textSize(75)
-        text("🌸", 100, 250)
-        text("🐞", 300, 250)
+
+        textSize(75);
+        text("🌸", 100, 250);
+        text("🐞", 300, 250);
       }
     </script>
   </body>
